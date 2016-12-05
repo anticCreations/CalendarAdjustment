@@ -45,15 +45,14 @@ class CalendarAdjustments {
 //        $wpdb->show_errors();
 
         //Excecuting the post_id first due to it's necessity in other query's
-        $this->db_wp_post();
+        $this->dbWPPost();
 
 //        //Event_id is done second due to it being a paramater to event_instance
-        $this->db_events();
+        $this->dbEvents();
 
 //        // //After the post_id and event_id are known, both values can be used for this database record
-        $this->db_event_instance();
+        $this->dbEventInstance();
     }
-
 
     public function dbWPPost()
     {
