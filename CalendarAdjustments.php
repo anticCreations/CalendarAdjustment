@@ -71,7 +71,7 @@ class CalendarAdjustments {
 
     public function dbEvents(){
         global $wpdb;
-        $wpdb->insert('wp_ai1ec_events', array(
+        $wpdb->insert($wpdb->prefix . 'ai1ec_events', array(
             'post_id' => $this->post_id,
             'start' => $this->start,
             'end' => $this->end,
@@ -86,7 +86,7 @@ class CalendarAdjustments {
 
     public function dbEventInstance(){
         global $wpdb;
-        $wpdb->insert('wp_ai1ec_event_instances', array(
+        $wpdb->insert($wpdb->prefix . 'ai1ec_event_instances', array(
             'id' => $this->event_id,
             'post_id' => $this->post_id,
             'start' => $this->start,
