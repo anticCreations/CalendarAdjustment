@@ -77,6 +77,7 @@ class CalendarAdjustments {
             'end' => $this->end,
             'timezone_name' => $this->timezone,
             'instant_event' => $this->instant,
+            'venue' => $this->venue,
             'allday' => $this->allday,
             'force_regenerate' => $this->force_regenerate
         ));
