@@ -27,8 +27,8 @@ class CalendarAdjustments {
         $this->allday = 0;
         $this->force_regenerate = 0;
 
-        //Default post_status has to be published else it won't be seen in the plugin
-        $this->post_status ="publish";
+        //If no post_status is set default to publish else it won't be seen in the plugin
+        $this->post_status = isset($order['post_status']) ? $order['post_status'] : "publish" ;
 
         // Converting a string to a slug friendly URL for a WordPress title e.g Title Name Is -> title-name-is
         $this->slug = sanitize_title($order['post_title']);
